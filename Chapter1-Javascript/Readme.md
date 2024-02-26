@@ -27,7 +27,7 @@
 
 is a programming interface for HTML and XML documents, that allows to create, manipulate, or delete the element from the document. It defines the logical structure of documents and the way a document is accessed and manipulated.
 
--   getElementById() Method
+-   **getElementById()** Method
 -   getElementsByClassName() Method
 -   getElementsByName() Method
 -   getElementsByTagName() Method
@@ -89,6 +89,7 @@ An object is a collection of properties, and a property is an association betwee
 
 <details>
 <summary>Prototype, Hoisting and Closure</summary>
+
 ### Prototype
 Enhance property/method of existing Object
 [Prototype](proto.html)
