@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h2>JavaScript Objects</h2>
+
+		<p id="demo"></p>
+
+		<script>
+			function Person(first, last, age, eye) {
+				this.firstName = first;
+				this.lastName = last;
+				this.age = age;
+				this.eyeColor = eye;
+				this.getAge = function () {
+					return this.age;
+				};
+			}
+
+			Person.nationality = "Russian";
+
+			const myFriend = new Person("John", "Doe", 50, "blue");
+
+			console.log(`myFriend.nationality: ${myFriend.nationality}`);
+
+			Person.prototype.nationality = "Indian";
+			console.log(`myFriend.nationality: ${myFriend.nationality}`);
+
+			Person.prototype.name = function () {
+				return this.firstName + " " + this.lastName;
+			};
+			console.log(`myFriend.name: ${myFriend.name}`);
+			console.log(`myFriend.name: ${myFriend.name()}`);
+
+			console.log(`myFriend.age: ${myFriend.age}`);
+			myFriend.age = 30;
+			console.log(`myFriend.age: ${myFriend.age}`);
+			console.log(`myFriend.getAge: ${myFriend.getAge()}`);
+			
+            //over ridding method in object's instance
+			myFriend.getAge = function () {
+				return this.firstName + " age is: " + this.age;
+			};
+
+			console.log(myFriend);
+
+			console.log(`myFriend.getAge: ${myFriend.getAge()}`);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<script>
+	const one = "one";
+
+	function outer() {
+		const two = "two";
+
+		function nested() {
+			const three = "three";
+			console.log(one);
+			console.log(two);
+			console.log(three);
+		}
+
+		return nested;
+	}
+
+	const nestedFunc = outer();
+	nestedFunc(); // logs 'one', 'two', and 'three'
+
+	function createCounter() {
+		let count = 0;
+		return function () {
+			count++;
+			console.log(count);
+		};
+	}
+
+	const counter = createCounter();
+	counter(); // Output: 1
+	counter(); // Output: 2
+</script>

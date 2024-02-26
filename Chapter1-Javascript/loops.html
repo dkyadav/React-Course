@@ -1,0 +1,36 @@
+<script>
+	for (i = 1; i <= 5; i++) {
+		console.log(i + "\n");
+	}
+
+	let j = 10;
+	while (j <= 14) {
+		console.log(j + "\n");
+		j++;
+	}
+
+	i = 21;
+	do {
+		console.log(i + "\n");
+		i++;
+	} while (i <= 25);
+
+	let myObj = { x: 1, y: 2, z: 3 };
+	for (let key in myObj) {
+		console.log(key, myObj[key]);
+	}
+
+	let arr = [1, 2, 3, 4, 5];
+	for (let value of arr) {
+		console.log(value);
+	}
+
+    for (let value of Object.keys(myObj)) {
+		console.log(value);
+	}
+
+    for (let value of Object.values(myObj)) {
+		console.log(value);
+	}
+
+</script>

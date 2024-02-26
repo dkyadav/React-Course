@@ -1,0 +1,30 @@
+<script>
+
+    const feature = {
+        'automatic':true,
+        'gears':4,
+        'fuel':'petrol'
+    }
+
+    const car = {
+        make: "Maruti",
+        year: 2020,
+        color: "Red",
+        insurance: true,
+        extra: feature,
+        describe: function(){
+            return this
+        }
+    }
+
+	function showProps(obj) {
+		let result = "";
+		Object.keys(obj).forEach((i) => {
+			result += `${i} = ${obj[i]}\n`;
+		});
+		console.log(result);
+	}
+
+    showProps(car);
+    console.log(car.describe());
+</script>

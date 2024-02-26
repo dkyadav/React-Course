@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>The Window Object</h1>
+		<h2>The setInterval() Method</h2>
+
+		<button onclick="myStart()">Start time</button>
+		<button onclick="myStop()">Stop the time</button>
+		<p id="timer"></p>
+		<p id="demo"></p>
+
+		<script>
+			const element = document.getElementById("demo");
+			let number = 1;
+			const maininternal = setInterval(function () {
+				element.innerHTML += "Hello " + number + "<br>";
+				number++;
+				if (number > 3) {
+					clearInterval(maininternal);
+				}
+			}, 1000);
+
+			let myInterval; //
+
+			function myTimer() {
+				const date = new Date();
+				document.getElementById("timer").innerHTML =
+					date.toLocaleTimeString();
+			}
+
+			function myStart() {
+				myInterval = setInterval(myTimer, 1000);
+			}
+
+			function myStop() {
+				clearInterval(myInterval);
+			}
+		</script>
+	</body>
+</html>

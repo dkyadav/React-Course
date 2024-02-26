@@ -1,0 +1,27 @@
+<script>
+	// logger.js
+
+	const LoggingService = (function () {
+		const infoMessage = "Info: ";
+		const warningMessage = "Warning: ";
+		const errorMessage = "Error: ";
+
+		return {
+			info: function (str) {
+				console.log(`${infoMessage}${str}`);
+			},
+			warning: function (str) {
+				console.log(`${warningMessage}${str}`);
+			},
+			error: function (str) {
+				console.log(`${errorMessage}${str}`);
+			}
+		};
+	})();
+
+	// someOtherFile.js
+
+	LoggingService.info("one"); // Info: one
+	LoggingService.warning("two"); // Warning: two
+	LoggingService.error("three"); // Error: three
+</script>

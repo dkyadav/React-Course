@@ -1,0 +1,15 @@
+<script>
+	function rounder(places) {
+		return function (num) {
+			return Number(num.toFixed(places));
+		};
+	}
+
+	const rounder2 = rounder(2);
+	const rounder3 = rounder(3);
+    const floatingPoint = 3.229346;
+	console.log(rounder2(floatingPoint)); // 3.46
+	console.log(rounder3(floatingPoint)); // 3.457
+
+    console.log((floatingPoint.toFixed(2))); //
+</script>

@@ -1,0 +1,26 @@
+<script>
+	function memoize(func) {
+		const cache = {};
+
+		return function (arg) {
+			if (arg in cache) {
+				return cache[arg];
+			} else {
+				const result = func(arg);
+				cache[arg] = result;
+				return result;
+			}
+		};
+	}
+
+	function expensiveCalculation(n) {
+		// Imagine a time-consuming computation here
+		console.log("Calculating...");
+		return n * 2;
+	}
+
+	const memoizedCalculation = memoize(expensiveCalculation);
+	console.log(memoizedCalculation(5)); // Output: Calculating... 10
+	console.log(memoizedCalculation(5)); // Output: 10 (Reads from cache)
+	
+</script>

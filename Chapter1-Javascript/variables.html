@@ -1,0 +1,24 @@
+<script>
+	const greeting = {
+		message: "say Hi",
+		times: 4,
+	};
+	// greeting = {
+	// 	words: "Hello",
+	// 	number: "five",
+	// }; // error:  Assignment to constant variable.
+
+	console.log(greeting);
+
+	greeting.message = "say Hello instead";
+
+	console.log(greeting);
+
+	var a = 10;
+	function f() {
+		var b = 20;
+		console.log(a, b);
+	}
+	f();
+	console.log(a);
+</script>

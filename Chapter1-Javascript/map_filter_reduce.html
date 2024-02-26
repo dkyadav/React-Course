@@ -1,0 +1,50 @@
+<script>
+	const myArray = [1, 2, 3, 4, 5];
+	const multipliedArray = myArray.map(function (element) {
+		return element * 2;
+	});
+	console.log(multipliedArray); // [2, 4, 6, 8, 10]
+
+	const multipleArr = myArray.map((v, i, a) => {
+		return v * 2;
+	});
+	console.log(multipleArr);
+
+	const multipleArr1 = myArray.map((v, i, a) => v * 2);
+	console.log(multipleArr1);
+
+	const students = [
+		{ name: "Quincy", grade: 96 },
+		{ name: "Jason", grade: 84 },
+		{ name: "Alexis", grade: 100 },
+		{ name: "Sam", grade: 65 },
+		{ name: "Katie", grade: 90 },
+	];
+
+	const studentGrades = students.filter((student) => student.grade >= 90);
+	console.log(studentGrades); // [ { name: 'Quincy', grade: 96 }, { name: 'Alexis', grade: 100 }, { name: 'Katie', grade: 90 } ]
+
+	const name_student = studentGrades.map((v) => v.name);
+	console.log(name_student);
+
+	const numbers = [1, 2, 3, 4];
+	const sum = numbers.reduce(function (acc, cur) {
+		return acc + cur;
+	}, 0);
+    //Initial value is number:0
+	console.log(sum); // 10
+
+	const pets = ["dog", "chicken", "cat", "dog", "chicken", "chicken", "rabbit"];
+
+	const petCounts_obj = pets.reduce(function (obj, pet) {
+		if (!obj[pet]) {
+			obj[pet] = 1;
+		} else {
+			obj[pet]++;
+		}
+		return obj;
+	}, {});
+    //Initial value is blank object {}
+
+	console.log(petCounts_obj);
+</script>
