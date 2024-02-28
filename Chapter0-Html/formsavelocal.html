@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			form * {
+				display: block;
+				margin: 10px;
+			}
+		</style>
+		<script>
+			function download(filename) {
+				var pom = document.createElement("a");
+                var text = "";
+				pom.innerText = "Download File";
+				
+				// pom.setAttribute(
+				// 	"href",
+				// 	"data:text/plain;charset=utf-8," + encodeURIComponent(text)
+				// );
+				
+
+				//pom.style.display = "none";
+				document.body.appendChild(pom);
+
+				//pom.click();
+
+				//document.body.removeChild(pom);
+
+				//e.preventDefault();
+
+				var elements = document.getElementById("my-form").elements;
+
+				for (var i = 0, element; (element = elements[i++]); ) {
+					if (element.type === "text" && element.value === "")
+						console.log("it's an empty textfield");
+                    else{
+                        console.log(element.type,element.value);
+                        text += element.value + "\n";
+                    }
+                        
+				}
+                pom.href = "data:text/plain;charset=utf-8," + encodeURIComponent(text);
+                pom.setAttribute("download", filename);
+
+				return false;
+			}
+		</script>
+	</head>
+	<body>
+		<form
+			onsubmit="return download(this['filename'].value)"
+            id="my-form"
+		>
+			<input type="text" name="filename" value="test.txt" />
+			<textarea rows="3" cols="50" name="text">PLEASE WRITE ANSWER HERE. 
+            </textarea>
+			<input
+				type="radio"
+				name="radio"
+				value="Option 1"
+				onclick="getElementById('problem').value=this.value;"
+			/>
+			Option 1<br />
+			<input
+				type="radio"
+				name="radio"
+				value="Option 2"
+				onclick="getElementById('problem').value=this.value;"
+			/>
+			Option 2<br />
+			
+			<input type="text" name="problem" id="problem" />
+			<label>Name</label>
+            <input type="text" name="fullname" id="fullname" value="Deepak yadav" />
+			<label>Age</label>
+            <input type="text" name="age" id="age" value="38" />
+			<input type="submit" value="SAVE" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function download(filename) 
+			{
+				var pom = document.createElement("a");
+                var text = "";
+				pom.innerText = "Download File";
+				document.body.appendChild(pom);
+
+				text += "Fullname = " + document.getElementById('fullname').value + "\n";
+				text += "Age = " + document.getElementById('age').value + "\n";
+				text += "Gender = " + document.querySelector('input[name="gender"]:checked').value + "\n";
+				text += "Aboutme = " + document.getElementById('aboutme').value + "\n";
+				
+                pom.href = "data:text/plain;charset=utf-8," + encodeURIComponent(text);
+                pom.setAttribute("download", filename);
+
+				return false;
+			}
+		</script>
+	</head>
+	<body>
+		<form
+			onsubmit="return download(this['filename'].value,this)"
+            id="my-form"
+		>
+			File Name
+			<input type="text" name="filename" value="test.txt" /><br><br>
+			<label>About Me</label><br>
+			<textarea rows="3" cols="50" name="aboutme" id="aboutme">PLEASE WRITE ANSWER HERE. 
+            </textarea>
+			<br><br>
+			<label>Gender</label><br>
+			<input
+				type="radio"
+				name="gender"
+				value="Male"
+			/>
+			Male<br />
+			<input
+				type="radio"
+				name="gender"
+				value="Female"
+			/>
+			Female<br /><br>
+			
+			
+			<label>Name</label><br>
+            <input type="text" name="fullname" id="fullname" value="Deepak yadav" /><br><br>
+			<label>Age</label><br>
+            <input type="text" name="age" id="age" value="38" /><br><br>
+			<input type="submit" value="SAVE" />
+		</form>
+	</body>
+</html>
