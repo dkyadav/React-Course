@@ -6,7 +6,7 @@
 			{
 				var pom = document.createElement("a");
                 var text = "";
-				pom.innerText = "Download File";
+				pom.innerText = "Download this File";
 				document.body.appendChild(pom);
 
 				text += "Fullname = " + document.getElementById('fullname').value + "\n";
@@ -14,7 +14,7 @@
 				text += "Gender = " + document.querySelector('input[name="gender"]:checked').value + "\n";
 				text += "Aboutme = " + document.getElementById('aboutme').value + "\n";
 				
-                pom.href = "data:text/plain;charset=utf-8," + encodeURIComponent(text);
+                pom.href = "data:application/pdf;base64,Base64 " + btoa(text);
                 pom.setAttribute("download", filename);
 
 				return false;
@@ -23,6 +23,7 @@
 	</head>
 	<body>
 		<form
+			method="get"
 			onsubmit="return download(this['filename'].value,this)"
             id="my-form"
 		>

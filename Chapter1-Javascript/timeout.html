@@ -14,7 +14,10 @@
 		<h2 id="demo"></h2>
 
 		<script>
-			const myTimeout = setTimeout(myGreeting, 2000);
+			const myTimeout = setTimeout(function(){
+				document.getElementById("demo").innerHTML = "Happy Birthday!";
+				console.log('timeout called');
+			}, 2000);
 
 			function myGreeting() {
 				document.getElementById("demo").innerHTML = "Happy Birthday!";
@@ -24,6 +27,6 @@
 				clearTimeout(myTimeout);
 				document.getElementById("demo").innerHTML = "Stop called, myGreeting fn wont be exeucted!";
 			}
-		</script>
+		</script> 
 	</body>
 </html>

@@ -4,7 +4,23 @@
 <h1>Test h1</h1>
 <h2 id="heading2">Test h2</h2>
 <h2 id="heading3">Test h2 with id</h2>
-<p class="para">This is paragraph</p>
+<p class="para">This is paragraph1</p>
+<p class="para">This is paragraph2</p>
+<p class="para" onclick="changeOnClick()">This is paragraph3</p>
+
+<input type="text" id="test_key" onkeyup="checkLenght()"/>
+<span id="length_key"></span>
+
 <script src="scripts/main.js"></script>
+
+
+<script>
+    function checkLenght(){
+        const check_val = document.getElementById('test_key').value;
+        console.log(check_val.length);
+
+        document.getElementById('length_key').innerHTML = check_val.length + " characters entered";
+    }
+</script>
 
 
