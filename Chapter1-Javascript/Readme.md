@@ -91,6 +91,7 @@ An object is a collection of properties, and a property is an association betwee
 <summary>Prototype, Hoisting and Closure</summary>
 
 ### Prototype
+
 Enhance property/method of existing Object
 [Prototype](proto.html)
 
@@ -99,7 +100,6 @@ Enhance property/method of existing Object
 Hoisting is JavaScript's default behavior of moving declarations to the top.
 To avoid bugs, always declare all variables at the beginning of every scope.
 JavaScript in strict mode does not allow variables to be used if they are not declared.
-Study "use strict" in the next chapter.
 [Hoist](hoist.html)
 
 ### Closure
@@ -130,6 +130,7 @@ A higher-order function is a function that either takes one or more functions as
 
 <details>
 <summary>Let, Const, Arrow, Class and Inheritance</summary>
+
 ES6 2015 introduced Let and Const
 [variables](variables.html)
 [class](class.html)

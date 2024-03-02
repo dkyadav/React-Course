@@ -1,0 +1,29 @@
+<script>
+	function sum() {
+        console.log('here');
+
+        var one = document.getElementById('num1').value;
+        var two = document.getElementById('num2').value;
+
+        console.log(one, two);
+
+        var sum = Number(one) + parseInt(two);
+
+        document.getElementById('result').innerHTML = sum;
+
+    }
+</script>
+
+<!-- <form> -->
+	<label>Number1</label>
+	<input type="text" id="num1" /><br />
+
+	<label>Number2</label>
+	<input type="text" id="num2" /><br />
+
+    <button onclick="sum()">Add</button>
+
+    <p id="result">
+        result would be displayed here
+    </p>
+<!-- </form> -->

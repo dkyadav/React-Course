@@ -12,9 +12,17 @@
 				text += "Fullname = " + document.getElementById('fullname').value + "\n";
 				text += "Age = " + document.getElementById('age').value + "\n";
 				text += "Gender = " + document.querySelector('input[name="gender"]:checked').value + "\n";
-				text += "Aboutme = " + document.getElementById('aboutme').value + "\n";
+				text += "Aboutme = " + document.getElementById('aboutme').value;
 				
-                pom.href = "data:application/pdf;base64,Base64 " + btoa(text);
+                //pom.href = "data:application/pdf;base64,aGVsbG8gdGhpcyBpcyB0ZXN0";// + btoa(text);
+				console.log(text);
+				console.log(btoa(text));
+				//var text_pdf = btoa(text).substring(0,btoa(text).length-2);
+				//console.log(text_pdf);
+				//var bin = atob(b64);
+				//RnVsbG5hbWUgPSBEZWVwYWsgeWFkYXYKQWdlID0gMzgKR2VuZGVyID0gTWFsZQpBYm91dG1lID0gUExFQVNFIFdSSVRFIEFOU1dFUiBIRVJFLiAp
+				//RmFyZS10aGVlLXdlbGwp
+				pom.href = "data:application/pdf;base64,JVBERi0xLjIgDQo5IDAgb2JqDQo8PA0KPj4NCnN0cmVhbQ0KQlQvIDMyIFRmKCAg"+"RnVsbG5hbWUgPSBEZWVwYWsgeWFkYXYKQWdlID0gMzgKR2VuZGVyID0gTWFsZQpBYm91dG1lID0gUExFQVNFIFdSSVRFIEFOU1dFUiBIRVJFLiAp"+"JyBFVA0KZW5kc3RyZWFtDQplbmRvYmoNCjQgMCBvYmoNCjw8DQovVHlwZSAvUGFnZQ0KL1BhcmVudCA1IDAgUg0KL0NvbnRlbnRzIDkgMCBSDQo+Pg0KZW5kb2JqDQo1IDAgb2JqDQo8PA0KL0tpZHMgWzQgMCBSIF0NCi9Db3VudCAxDQovVHlwZSAvUGFnZXMNCi9NZWRpYUJveCBbIDAgMCAyNTAgNTAgXQ0KPj4NCmVuZG9iag0KMyAwIG9iag0KPDwNCi9QYWdlcyA1IDAgUg0KL1R5cGUgL0NhdGFsb2cNCj4+DQplbmRvYmoNCnRyYWlsZXINCjw8DQovUm9vdCAzIDAgUg0KPj4NCiUlRU9G";
                 pom.setAttribute("download", filename);
 
 				return false;
@@ -28,10 +36,9 @@
             id="my-form"
 		>
 			File Name
-			<input type="text" name="filename" value="test.txt" /><br><br>
+			<input type="text" name="filename" value="test.pdf" /><br><br>
 			<label>About Me</label><br>
-			<textarea rows="3" cols="50" name="aboutme" id="aboutme">PLEASE WRITE ANSWER HERE. 
-            </textarea>
+			<textarea rows="3" cols="50" name="aboutme" id="aboutme">PLEASE WRITE ANSWER HERE.</textarea>
 			<br><br>
 			<label>Gender</label><br>
 			<input

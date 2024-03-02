@@ -1,0 +1,25 @@
+<script>
+    function isStoragePresent(){
+        if (typeof(Storage) !== "undefined")
+            return true;
+        else
+            return false;
+    }
+
+    function saveToLocalStorage(){
+
+        if(!isStoragePresent())
+            alert('No storage present on this browser');
+
+        const k = document.getElementById('key').value;
+        const v = document.getElementById('val').value;
+        localStorage.setItem(k, v);
+    }
+</script>
+
+Key<input type="text" id="key"></input><br>
+Val<input type="text" id="val"></input>
+
+<button onclick="saveToLocalStorage()">Save</button>
+
+<div id="result"></div>
