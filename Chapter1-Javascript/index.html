@@ -1,8 +1,61 @@
 
 
-<h1>Test h1</h1>
-<h1>Test h1</h1>
-<h2 id="heading2">Test h2</h2>
+
+
+<script>
+    //alert('hello');
+    function callme(a,b,c,d)
+    {
+        console.log('hello this is console.');
+        var x = "value of v";
+        console.log('x');
+
+        console.log(a);
+        console.log(b,c);
+    }
+
+    function fn1(){
+        
+        var f_num = document.getElementById('first_number').value;
+        var s_num = document.getElementById('second_number').value;
+
+        var num_f_num = Number(f_num);
+        var num_s_num = parseInt(f_num);
+
+        document.getElementById('paraid1').innerHTML = num_f_num + num_s_num;
+
+        //console.log(x);
+    }
+    
+</script>
+
+<body>
+    <h1>Test h1</h1>
+    <h1>Test h1</h1>
+
+    <p>
+        Click me to change text
+    </p>
+
+    FirstNumber:
+    <input type="text" id="first_number"/>
+    <br>
+    SecondNumber:
+    <input type="text" id="second_number"/>
+    <br>
+
+    <button onclick="fn1()">Sum of two numbers</button>
+
+    <p id="paraid1">
+        Sum of two number will be displayed here.
+    </p>
+
+
+</body>
+
+
+
+<!-- <h2 id="heading2">Test h2</h2>
 <h2 id="heading3">Test h2 with id</h2>
 <p class="para">This is paragraph1</p>
 <p class="para">This is paragraph2</p>
@@ -23,4 +76,4 @@
     }
 </script>
 
-
+ -->

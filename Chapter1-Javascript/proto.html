@@ -6,6 +6,20 @@
 		<p id="demo"></p>
 
 		<script>
+
+			const obj1 = {
+				"name":"deepak",
+				"age":"37"
+			}
+			
+			// obj1 = {
+			// 	"name":"ajit",
+			// 	"age":"24"
+			// }
+			obj1.name = "xyz";
+			
+			console.log(obj1)
+
 			function Person(first, last, age, eye) {
 				this.firstName = first;
 				this.lastName = last;
@@ -34,6 +48,8 @@
 			console.log(`myFriend.age: ${myFriend.age}`);
 			myFriend.age = 30;
 			console.log(`myFriend.age: ${myFriend.age}`);
+
+
 			console.log(`myFriend.getAge: ${myFriend.getAge()}`);
 			
             //over ridding method in object's instance

@@ -17,14 +17,21 @@
         }
     }
 
-	function showProps(obj) {
+	function showProps_fn(obj) {
+        //console.log(Object.keys(obj));
+        console.log(Object.values(obj));
+
+        console.log(Object.values(obj)[4]);
+        console.log(obj.extra);
+        console.log(obj['extra']);
+
 		let result = "";
 		Object.keys(obj).forEach((i) => {
-			result += `${i} = ${obj[i]}\n`;
+			result += `${i} is eq to => ${obj[i]}\n`;
 		});
 		console.log(result);
 	}
 
-    showProps(car);
-    console.log(car.describe());
+    showProps_fn(car);
+    //console.log(car.describe());
 </script>

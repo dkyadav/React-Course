@@ -13,7 +13,14 @@
 			const element = document.getElementById("demo");
 			let number = 1;
 
-			const maininternal = setInterval(function () {
+			// const maininternal = setInterval(function () {
+			// 	element.innerHTML += "Hello " + number + " adding here <br>";
+			// 	number++;
+			// 	if (number > 3) {
+			// 		clearInterval(maininternal);
+			// 	}
+			// }, 1000);
+			const maininternal = setInterval(() => {
 				element.innerHTML += "Hello " + number + " adding here <br>";
 				number++;
 				if (number > 3) {
@@ -31,7 +38,7 @@
 			}
 
 			function myStart() {
-				myInterval = setInterval(myTimer, 1000);
+				myInterval = setInterval(myTimer, 3000);
 			}
 
 			function myStop() {
