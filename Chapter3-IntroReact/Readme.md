@@ -23,6 +23,13 @@ npm init react-app my-app
 
 create-react-app includes built tools such as webpack, Babel, and ESLint.
 
+### Virtual DOM
+Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.
+React only changes what needs to be changed!
+
+
+
+
 
 ### Example
 

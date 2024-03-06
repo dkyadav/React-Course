@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css" >
+        <script src="index.js"> </script>
+    </head>
+    <body>
+        
+        <div>
+            <h2>Basic calculator</h2>
+            <hr>
+            <table cellpadding="5">
+                <tr>
+                    <td>Number 1</td>
+                    <td>
+                        <input type="text" id="number1_textbox" class="input_class" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Number 2</td>
+                    <td>
+                        <input type="text" id="number2_textbox" class="input_class" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button id="add" onclick="add()">+</button>
+                        <button onclick="commonfn('sub')">-</button>
+                        <button onclick="commonfn('multiply')">*</button>
+                        <button onclick="commonfn('divide')">%</button>
+                        <button onclick="arrowfn_sample('pow')">pow</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Result</td>
+                    <td id="resultId">...</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
+

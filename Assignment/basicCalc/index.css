@@ -1,0 +1,13 @@
+div {
+    width: 300px;
+    margin: 30px;
+    border: 1px dashed #ccc;
+    padding: 30px;
+}
+
+button{
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+
+}
