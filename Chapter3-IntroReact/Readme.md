@@ -46,12 +46,12 @@ React only changes what needs to be changed!
 
 </details>
 
-<!-- <details>
-<summary>Basics is React.js</summary> -->
+<details>
+<summary>Basics is React.js</summary>
 
-### Components
+## Components
 
-#### Class Components
+### Class Components
 
 Export and Import from Class and Functional Component
 **Exports**
@@ -82,9 +82,64 @@ import { ClassName } from './ClassName.js';
     * componentDidUpdate() [useEffect() in Functional comp]
 1. Unmounting
     * componentWillUnmount()
-    
+
+Example: <br>
+[ClassComponent basic](./my-app/src/examples/ClassComponent.jsx) <br>
+[Class Component Life Cycle](./my-app/src/examples/CCLifeCycle.jsx) <br>
+[Functional Component Life Cycle](./my-app/src/examples/FCLifeCycle.jsx) <br>
+
+### Functional Components
+
+[Functional component basic with props](./my-app/src/examples/BasicFC.jsx)
+
+**FC State, List, Conditions, Events:**
+
+[FC_state_list_con_event](./my-app/src/examples/FC_state_list_con_event.jsx)
+
+**Form handling:**
+
+[FC_Forms](./my-app/src/examples/FC_forms.jsx)
+
+---
+
+</details>
+
+<details>
+<summary>Router</summary>
+
+## Router
+
+```
+npm i react-router-dom 
+```
+**React Router v6**
+
+For Routing to components
+```
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+```
+
+For Link ing internally
+```
+import { Outlet, Link } from "react-router-dom";
+```
+
+[Example of Router](./my-app/src/RouteMain.jsx)
+
+---
+
+</details>
+
+<!-- <details>
+<summary>Router</summary> -->
 
 
 ---
 
 <!-- </details> -->
+
+
+<!-- useState
+setState(arg)
+arg would be new state, either new string,obj,array
+or updater function. That will be a pure function means: should take the pending state as its only argument, and should return the next state -->

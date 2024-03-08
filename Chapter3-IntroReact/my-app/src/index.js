@@ -11,6 +11,14 @@ import MainApp from './examples/Hook-useEffect'
 
 import FCFC from './examples/FCLifeCycle';
 
+import School from './examples/BasicFC';
+
+import FCM from './examples/FC_state_list_con_event';
+
+import FE from './examples/FC_forms';
+
+import RootApp from './RouteMain';
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -20,9 +28,14 @@ root.render(
         {/* <CC/>
         <CCC/>
         <SubClassComponent/> */}
-        <CCLifeCycle/>
+
+        {/* <CCLifeCycle/>
         <FCFC/>
         <MainApp/>
+        <School/> */}
+        {/* <FCM/> */}
+        {/* <FE/> */}
+        <RootApp/>
         </>
 	</React.StrictMode>
 );
