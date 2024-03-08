@@ -32,14 +32,14 @@
 -   flex
 
 ### CSS FLEX
-    Flexible responsive layout structure without using float or positioning.
-    class name: flex
-    flex-direction(column,column-reverse,*row,row-reverse)
-    flex-wrap (wrap,*nowrap,wrap-reverse) on the basis of width of child divs
-    flex-flow (combines flex-direction flex-wrap)
-    justify-content (center,*flex-start,flex-end,space-around,space-between)
-    align-items (works on height: center,flex-start,flex-end,*stretch,baseline)
-    align-content (dependent on flex-wrap: wrap; and bigger heights => \*stretch,space-between,space-around,center,flex-start,flex-end)
+  * Flexible responsive layout structure without using float or positioning.
+  * class name: flex
+  * flex-direction(column,column-reverse,*row,row-reverse)
+  * flex-wrap (wrap,*nowrap,wrap-reverse) on the basis of width of child divs
+  * flex-flow (combines flex-direction flex-wrap)
+  * justify-content (center,*flex-start,flex-end,space-around,space-between)
+  * align-items (works on height: center,flex-start,flex-end,*stretch,baseline)
+  * align-content (dependent on flex-wrap: wrap; and bigger heights => \*stretch,space-between,space-around,center,flex-start,flex-end)
 
 To align both text and div in center use
 
