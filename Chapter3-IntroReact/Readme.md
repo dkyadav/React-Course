@@ -34,6 +34,14 @@ React only changes what needs to be changed!
 
 [Example of basic inclusion of js file](index.html)
 
+### JSX
+
+- Javascript XML. Should be a valid XML with opening and closing tags. 
+- Write JS/HTML in React. Place HTML elements in DOM without using createElement()
+- JS code can be written in curly brackets { }. JSX will execute the expression wihtint { } and return the result.
+- Use className isntead of class. Any other CSS property as camel case.
+
+
 ---
 
 </details>
@@ -44,6 +52,38 @@ React only changes what needs to be changed!
 ### Components
 
 #### Class Components
+
+Export and Import from Class and Functional Component
+**Exports**
+```
+export default class ClassName extends React.Component {}
+import AnyName from './ClassName.js';
+```
+
+**Named**
+```
+export class ClassName extends React.Component {}
+import { ClassName } from './ClassName.js';
+```
+[Example](./my-app/src/examples/ClassComponent.jsx)
+
+### Lifecycle of Class Components
+
+1. Mounting
+    * **constructor()**
+    * static getDerivedStateFromProps()
+    * **render()**
+    * componentDidMount() [useEffect() in Functional comp]
+1. Updating
+    * getDerivedStateFromProps - same as mounting
+    * shouldComponentUpdate()
+    * render() - same as mounting
+    * getSnapshotBeforeUpdate()
+    * componentDidUpdate() [useEffect() in Functional comp]
+1. Unmounting
+    * componentWillUnmount()
+    
+
 
 ---
 
