@@ -17,7 +17,9 @@ import FCM from './examples/FC_state_list_con_event';
 
 import FE from './examples/FC_forms';
 
-import RootApp from './RouteMain';
+import First from './examples/stateProp/First'
+
+// import RootApp from './RouteMain';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -35,7 +37,8 @@ root.render(
         <School/> */}
         {/* <FCM/> */}
         {/* <FE/> */}
-        <RootApp/>
+        {/* <RootApp/> */}
+        <First/>
         </>
 	</React.StrictMode>
 );
