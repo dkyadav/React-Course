@@ -8,14 +8,24 @@ import App from './App';
 
 import FCB from './example/FCbasic'
 
+import FEx from './example/FormExample';
+
+import UE from './example/hooks/UseEffect';
+
+import MR from './RouterMain';
+import ApiCall from './example/APIcall';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React123.StrictMode>
-    <App />
+    {/* <App /> */}
     {/* <DCC test="1234"/>
     <SubClassComp/> */}
-    <FCB/>
+    {/* <FCB/> */}
+    {/* <FEx/> */}
+    {/* <UE/> */}
+    {/* <MR/> */}
+    <ApiCall/>
   </React123.StrictMode>
 );
 
