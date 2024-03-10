@@ -131,7 +131,18 @@ import { Outlet, Link } from "react-router-dom";
 </details>
 
 <!-- <details>
-<summary>Router</summary> -->
+<summary>Hooks</summary> -->
+
+### useState()
+
+### useEffect()
+
+Mostly used for fetching data, calling external API after component is rendered
+```
+import { useEffect } from 'react';
+useEffect(<setup function>, dependencies?)
+```
+
 
 
 ---
