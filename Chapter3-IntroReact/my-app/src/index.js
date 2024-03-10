@@ -19,7 +19,23 @@ import FE from './examples/FC_forms';
 
 import First from './examples/stateProp/First'
 
-// import RootApp from './RouteMain';
+import RootApp from './RouteMain';
+
+import UF from './examples/hooks/UseEffect';
+
+import UC from './examples/hooks/UseContext'
+
+import UR from './examples/hooks/UseRef'
+
+import API from "./examples/API";
+
+import APIAX from "./examples/API_axios";
+
+import UseReduce from "./examples/hooks/UseReducer";
+
+import UMemo from "./examples/hooks/UseMemo";
+
+import UseCB from "./examples/hooks/UseCallback";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -38,7 +54,15 @@ root.render(
         {/* <FCM/> */}
         {/* <FE/> */}
         {/* <RootApp/> */}
-        <First/>
+        {/* <First/> */}
+        {/* <UF/> */}
+        {/* <UC/> */}
+        {/* <UR/> */}
+        {/* <API/> */}
+        {/* <APIAX/> */}
+        {/* <UseReduce/> */}
+        {/* <UMemo/> */}
+        <UseCB/>
         </>
 	</React.StrictMode>
 );

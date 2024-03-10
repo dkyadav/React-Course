@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Blogs from "./pages/Blogs";
+import Blog from "./pages/Blog";
 import Contact from "./pages/Contactus";
 import NoPage from "./pages/NoPage";
 
@@ -21,11 +22,11 @@ function RouteM() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route path="blogs" element={<Blogs />} />
-                    <Route path="user" element={<User />} />
-                    <Route path="contact/:id" element={<Contact />} />
+                    <Route path="blogs/" element={<Blogs />} />
+                    <Route path="blogs/:blogid" element={<Blog />} />
+                    <Route path="contact" element={<Contact />} />
                     <Route path="*" element={<NoPage />} />
-                    <Route path="user/" element={<User />}>
+                    <Route path="user" element={<User />}>
                     {/* <Route path="user/">
                         <Route index element={<User />} /> */}
                         <Route path="info" element={<UserInfo />} />
