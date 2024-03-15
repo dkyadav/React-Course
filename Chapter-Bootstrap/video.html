@@ -1,0 +1,43 @@
+<button onclick="playPause()">Play/Pause</button>
+<button onclick="makeBig()">Big</button>
+<button onclick="makeSmall()">Small</button>
+<button onclick="makeNormal()">Normal</button>
+
+<video width="620" height="640" id="video1" autoplay>
+	<source src="flex-position-css-10march.mp4" type="video/mp4" />
+
+	Your browser does not support the video tag.
+</video>
+
+<script>
+	var myVideo = document.getElementById("video1");
+
+	myVideo.onplay = function () {
+		console.log('start play')
+	};
+
+    myVideo.onplaying = function () {
+		console.log('resumed to play')
+	};
+
+	console.log(myVideo.paused);
+
+	function playPause() {
+		console.log(myVideo.paused);
+
+		if (myVideo.paused) myVideo.play();
+		else myVideo.pause();
+	}
+
+	function makeBig() {
+		myVideo.width = 860;
+	}
+
+	function makeSmall() {
+		myVideo.width = 320;
+	}
+
+	function makeNormal() {
+		myVideo.width = 420;
+	}
+</script>
