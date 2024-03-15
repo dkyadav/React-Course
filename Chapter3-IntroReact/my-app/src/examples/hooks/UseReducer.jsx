@@ -1,6 +1,7 @@
 /*
 useReducer(fn <reducer>, <initialState>)
-The reducer function contains your custom logic to change initial state provided. Reducer function usually have two arguments. 1)state 2)action
+The reducer function contains your custom logic to change initial state provided. 
+Reducer function usually have two arguments. 1)state 2)action
 The useReducer Hook returns the current state and a dispatch method.
 */
 
@@ -55,13 +56,15 @@ const initialTodos = [
 const red = (state, action) => {
     switch (action.type) {
         case "COMPLETE":
-            return state.map((todo) => {
+            let new_state = state.map((todo) => {
                 if (todo.id === action.id) {
+                    //console.log(todo);
                     return { ...todo, complete: !todo.complete };
                 } else {
                     return todo;
                 }
             });
+            return new_state;
         default:
             return state;
     }

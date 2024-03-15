@@ -1,6 +1,7 @@
 //The useRef Hook allows you to persist values between renders.
 //It can be used to store a mutable value that does not cause a re-render when updated.
 //It can be used to access a DOM element directly.
+//useRef() only returns one item. It returns an Object called current
 
 import { useEffect, useRef } from "react";
 import { useState } from "react";
@@ -19,19 +20,19 @@ const UseRefFn = () => {
         console.log(`Called useeffect`);
     });
 
+
+
     const inpElemRef = useRef();
-
-
     function focusme() {
         inpElemRef.current.focus();
     }
-
-    const savestateref = useRef();
-    const state_history = useRef([]);
-
     function getvalue() {
         console.log(inpElemRef.current.value);
     }
+
+
+    const savestateref = useRef();
+    const state_history = useRef([]);
 
     function updatestate() {
         state_history.current.push(savestateref.current.value);
@@ -41,7 +42,7 @@ const UseRefFn = () => {
 
     return (
         <>
-            <h1>Use Ref </h1>
+            <h1>Use Ref to count number of time the component rendered</h1>
             <input type="text" value={inpval} onChange={(event) => setinpval(event.target.value)} />
             <p>Render Count: {useRefRet.current.totalrender} for {useRefRet.current.name}</p>
 

@@ -4,8 +4,10 @@ import { useState, useMemo } from "react";
 const UMemo = () => {
     const [count, setCount] = useState(0);
     const [todos, setTodos] = useState([]);
-    const calculation = useMemo(() => expensiveCalculation(count), [count]);
-    //const calculation = expensiveCalculation(count);
+    //const calculation = useMemo(() => expensiveCalculation(count), [count]);
+    const calculation = expensiveCalculation(count);
+    //expensiveCalculation depending on state: count. 
+    //So calculated everytime state changes
 
     const increment = () => {
         setCount((c) => c + 1);

@@ -21,7 +21,7 @@ import First from './examples/stateProp/First'
 
 import RootApp from './RouteMain';
 
-import UF from './examples/hooks/UseEffect';
+import UE from './examples/hooks/UseEffect';
 
 import UC from './examples/hooks/UseContext'
 
@@ -55,14 +55,14 @@ root.render(
         {/* <FE/> */}
         {/* <RootApp/> */}
         {/* <First/> */}
-        {/* <UF/> */}
+        {/* <UE/> */}
         {/* <UC/> */}
         {/* <UR/> */}
         {/* <API/> */}
         {/* <APIAX/> */}
         {/* <UseReduce/> */}
-        {/* <UMemo/> */}
-        <UseCB/>
+        <UMemo/>
+        {/* <UseCB/> */}
         </>
 	</React.StrictMode>
 );

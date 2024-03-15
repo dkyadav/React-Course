@@ -1,5 +1,6 @@
 /*
-The useCallback and useMemo Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function.
+The useCallback and useMemo Hooks are similar. 
+The main difference is that useMemo returns a memoized value and useCallback returns a memoized function.
 */
 
 import { useState, useCallback } from "react";
@@ -12,12 +13,14 @@ const UseCB = () => {
     const increment = () => {
         setCount((c) => c + 1);
     };
-    //   const addTodo = useCallback(() => {
-    //     setTodos((t) => [...t, "New Todo"]);
-    //   }, [todos]);
+    
+    // const addTodo = useCallback(() => {
+    //     setTodos((t) => [...t, "New Todo in CB"]);
+    // }, [todos]);
+    
     const addTodo = () => {
         setTodos((t) => [...t, "New Todo"]);
-      }
+    }
 
     return (
         <>
