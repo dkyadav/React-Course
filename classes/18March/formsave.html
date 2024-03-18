@@ -1,0 +1,54 @@
+<form name="studentForm" id="studentForm" onsubmit="return display_info()">
+	name<input type="text" id="name_id" name="name_name" /><br />
+	Age<input type="text" id="age_id" name="age_name" /><br />
+	Education<select name="education_name" id="education_id">
+		<option value="10">10 th</option>
+		<option value="12">12 th</option>
+		<option value="grad">Graduation</option>
+		<option value="pg">Postgrad</option>
+	</select>
+	<br />Hobbies
+	<input type="checkbox" name="hobbies" id="sports" value="sports 123" />Sports,
+	<input type="checkbox" name="hobbies" id="reading"  value="reading"/>Reading,
+	<input type="checkbox" name="hobbies" id="singing"  value="singing"/>Singing,
+	<input type="checkbox" name="hobbies" id="travelling"  value="travelling" />Travelling
+	<br />Gender
+	<input type="radio" name="gender" id="male" value="male" />male,
+	<input type="radio" name="gender" id="female" value="female" />female,
+	<br />
+	<textarea name="aboutme" id="aboutme"></textarea>
+	<br />
+	<input type="submit" name="submit" value="Display Info">
+</form>
+
+<p id="form_detail"></p>
+
+<script>
+	function ret_val(id) {
+		return document.getElementById(id).value;
+	}
+
+	function display_info() {
+		var html_str = "";
+
+		html_str += "name: " + ret_val("name_id") + '<br>';
+		html_str += "age: " + ret_val("age_id") + '<br>';
+		html_str += "Education: " + ret_val("education_id") + '<br>';
+		var checks = document.querySelectorAll('input[name="hobbies"]:checked');
+
+		console.log(checks);
+
+        html_str += 'Hobbies: ';
+        checks.forEach(elem=>{
+            html_str += elem.value+ ' ';
+        })
+
+        html_str += "Gender: " + document.querySelector('input[name="gender"]:checked').value + "<br>"; 
+
+        html_str += "aboutme: " + ret_val("aboutme") + '<br>';
+
+        document.getElementById("form_detail").innerHTML = html_str;
+
+        return false;
+	}
+</script>

@@ -9,7 +9,12 @@ const profileSlice = createSlice({
 	},
 	reducers: {
 		updateName: (state, action) => {
-			state.name = action.payload;
+			//state.name = action.payload;
+
+			const temp_State = state;
+			temp_State.name = action.payload;
+			return temp_State;
+
 		},
 		updateEmail: (state, action) => {
 			state.email = action.payload;

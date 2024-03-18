@@ -12,7 +12,8 @@ export default function FirstComp() {
         <>
             <h1>First FC - {fcounter}</h1>
             <button onClick={()=>setFCounter(fcounter=>fcounter+1)}>+</button>
-            <SC firstCounter={fcounter} change={handleState}/>
+            
+            <SC firstCounter={fcounter} changefn={handleState}/>
             
         </>
     )

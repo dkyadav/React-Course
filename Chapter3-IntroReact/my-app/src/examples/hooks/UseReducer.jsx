@@ -9,10 +9,10 @@ import { useReducer } from "react";
 
 export default function UR() {
 
-    const [todos, dispatch] = useReducer(red, initialTodos);
+    const [todos, actionafn] = useReducer(red, initialTodos);
 
     const handleComplete = (todo) => {
-        dispatch({ type: "COMPLETE", id: todo.id });
+        actionafn({ type: "COMPLETE123", id: todo.id });
     };
 
     return (
@@ -59,7 +59,7 @@ const red = (state, action) => {
             let new_state = state.map((todo) => {
                 if (todo.id === action.id) {
                     //console.log(todo);
-                    return { ...todo, complete: !todo.complete };
+                    return { ...todo, complete: !todo.complete, title:'new title'+action.id };
                 } else {
                     return todo;
                 }

@@ -18,6 +18,25 @@ export default function Products(props) {
 
     return (
         <>
+
+            {/* <h2>test</h2>
+            {
+                ['one', 'two', 'three', 'two'].map((v, i) => {
+                    return (
+                        <p key={i}>{v}</p>
+                    )
+                })}
+
+            <hr />
+            {
+                [{ id: 1, id: "one value" },{ id: 2, val: "two value" }].map(v => {
+                    return (
+                        <p key={v.id}>{v.id}</p>
+                    )
+                })
+            } */}
+
+
             <h1>Products</h1>
             {
                 prods &&
@@ -25,13 +44,13 @@ export default function Products(props) {
                     {prods.map(p => {
                         return (
                             <div style={subBox} key={p.id}>
-                                Name: {p.name}<br/>
-                                Quantity left: {p.quantity}<br/>
+                                Name: {p.name}<br />
+                                Quantity left: {p.quantity}<br />
                                 Price: {p.price}
-                                <hr/>
+                                <hr />
                                 {
                                     p.quantity > 0 &&
-                                    <button onClick={()=>props.addMeToCart(p.id)}>Add to cart</button>
+                                    <button onClick={() => props.addMeToCart(p.id)}>Add to cart</button>
                                 }
                             </div>
 
@@ -40,6 +59,8 @@ export default function Products(props) {
                 </div>
 
             }
+
+
         </>
 
 

@@ -18,76 +18,102 @@ function App() {
 			phone: "9717786299",
 		},
 		//products: [],
-    products: data,
+		products: data,
 		cart: [],
 	});
 
-  // useEffect(()=>{
-  //   console.log(data);
-  //   setAppst({...appst,products:data});
-  // },[]);
+	// useEffect(()=>{
+	//   console.log(data);
+	//   setAppst({...appst,products:data});
+	// },[]);
 
-  function onClickChange(change_name,change_val){
-    // console.log(change_name);
-    // console.log(change_val);
-    setAppst({...appst,profile:{...appst.profile,[change_name]:change_val}});
-  }
+	function onClickChange(change_key, change_val) {
+		// console.log(change_key);
+		// console.log(change_val);
 
-  function handleCart(id){
-    console.log(id);
-    
-    // let temp_product = appst.products.filter(v=>{
-    //   if(v.id===id){
-    //     return v
-    //   }
-    // });
-    console.log(appst.products);
-    let temp_product = appst.products.filter(v=>v.id==id);
 
-    //Add to cart 
-    //way 1
-    
-    let new_cart = appst.cart;
-    //temp_product[0].quantity=1;
-    new_cart.push({...temp_product[0],quantity:1});
-    console.log(new_cart);
-    setAppst({...appst,cart:new_cart});
-    //way 2
-    //setAppst({...appst,cart:[...appst.cart,temp_product[0]]});
+		setAppst({
+			...appst,
+			profile: {
+				...appst.profile,
+				[change_key]: change_val,
+			},
+		});
 
-    //Decrement from product
-    let temp_new_products_state = [...appst.products];
-    let update_prod = temp_new_products_state.find(v => v.id ==id);
-    update_prod.quantity -= 1;
-    setAppst({...appst,products:temp_new_products_state});
-    
-    console.log(temp_product[0]);
-  }
+	}
 
-  function handleremoveCart(){
+	function handleCart(id) {
+		console.log(id);
 
-  }
+		// let temp_product = appst.products.filter(v=>{
+		//   if(v.id===id){
+		//     return v
+		//   }
+		// });
+		console.log(appst.products);
+		let temp_product = appst.products.filter((v) => v.id == id);
+
+		//Add to cart
+		//way 1
+
+		let new_cart = appst.cart;
+		//temp_product[0].quantity=1;
+		new_cart.push({ ...temp_product[0], quantity: 1 });
+		console.log(new_cart);
+		setAppst({ ...appst, cart: new_cart });
+		//way 2
+		//setAppst({...appst,cart:[...appst.cart,temp_product[0]]});
+
+		//Decrement from product
+		let temp_new_products_state = [...appst.products];
+		let update_prod = temp_new_products_state.find((v) => v.id == id);
+		update_prod.quantity -= 1;
+		setAppst({ ...appst, products: temp_new_products_state });
+
+		console.log(temp_product[0]);
+	}
+
+	function handleremoveCart() {}
 
 	return (
 		<div>
 			<BrowserRouter>
-				<Navigation uname={appst.profile.name} cartitems={appst.cart.length} />
+				<Navigation
+					uname={appst.profile.name}
+					cartitems={appst.cart.length}
+				/>
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/products" element={<Products productlist={appst.products} addMeToCart={handleCart} />}>
+					<Route
+						path="/products"
+						element={
+							<Products
+								productlist={appst.products}
+								addMeToCart={handleCart}
+							/>
+						}
+					>
 						<Route
 							path="/products/:productid"
 							element={<Products />}
 						/>
 					</Route>
-					<Route path="/cart" element={<Cart cartitemlist={appst.cart} removeMeToCart={handleremoveCart}/>} />
+					<Route
+						path="/cart"
+						element={
+							<Cart
+								cartitemlist={appst.cart}
+								removeMeToCart={handleremoveCart}
+							/>
+						}
+					/>
 					<Route
 						path="/profile"
 						element={
 							<Profile
 								appst={appst}
 								username={appst.profile.name}
-								changeEmail={(n,v)=>onClickChange(n,v)}
+								changeMainSate={(n, v) => onClickChange(n, v)}
 							/>
 						}
 					/>

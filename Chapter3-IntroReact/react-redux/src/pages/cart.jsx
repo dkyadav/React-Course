@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
-import { removeCart } from "../store/reducers/cart.reducer";
+import { removeCart, emptyCart } from "../store/reducers/cart.reducer";
+import { incrementQuantity } from "../store/reducers/product.reducer";
 
 export default function Cart() {
 
@@ -24,6 +25,7 @@ export default function Cart() {
             {
                 cartitemlist &&
                 <div style={mainBox}>
+
                     {cartitemlist.map(p => {
                         return (
                             <div style={subBox} key={p.id}>
@@ -33,13 +35,20 @@ export default function Cart() {
                                 <hr />
                                 {
                                     p.quantity > 0 &&
-                                    <button onClick={() => dispatch(removeCart(p.id))}>Remove from cart</button>
+                                    <button onClick={() => {
+                                            dispatch(removeCart(p.id));
+                                            dispatch(incrementQuantity(p))
+                                        }
+                                    }>Remove from cart</button>
                                 }
                             </div>
                         )
                     })}
+
                 </div>
             }
+            {cartitemlist.length > 0 ? <button onClick={() => dispatch(emptyCart())}>Empty Cart</button> : ''}
+
         </>
     )
 };

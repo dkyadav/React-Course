@@ -48,7 +48,7 @@ export default function FormExample() {
         <>
             <h1>Forms</h1>
             <form onSubmit={submitme}>
-                <label>Name</label>
+                <label>Name1</label>
                 <input 
                     type="text" 
                     name="fullname" 

@@ -8,7 +8,8 @@ import { useState } from "react";
 
 const UseRefFn = () => {
 
-    const [inpval, setinpval] = useState("");
+    const [inpval, setinpval] = useState("test");
+
     const ref_obj = {
         name: "Deepak",
         totalrender: 0
@@ -17,7 +18,7 @@ const UseRefFn = () => {
 
     useEffect(() => {
         useRefRet.current.totalrender += 1;
-        console.log(`Called useeffect`);
+        console.log(`Called useeffect: ${useRefRet.current.totalrender}`);
     });
 
 
@@ -36,14 +37,23 @@ const UseRefFn = () => {
 
     function updatestate() {
         state_history.current.push(savestateref.current.value);
-        //setinpval(savestateref.current.value);
+
+        console.log(savestateref.current.value);
+
+        setinpval(savestateref.current.value);
+
         console.log(state_history.current);
     }
 
     return (
         <>
             <h1>Use Ref to count number of time the component rendered</h1>
+            
+            current inpval = {inpval}<br/>
+            
             <input type="text" value={inpval} onChange={(event) => setinpval(event.target.value)} />
+
+
             <p>Render Count: {useRefRet.current.totalrender} for {useRefRet.current.name}</p>
 
             <hr />

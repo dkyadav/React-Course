@@ -1,0 +1,147 @@
+<script>
+	var two = "second var";
+	var two = "second 1.1";
+	two = "second 1.2";
+
+	let one = "first var";
+	one = "test 1.22";
+
+	const three = "third var";
+	//three = 'helllooo';
+
+	console.log(one);
+	console.log(two);
+	console.log(three);
+
+	var a = "10";
+	var b = 10;
+
+	if (a == b) console.log("a==b is true");
+	else console.log("a==b is false");
+
+	if (a === b) console.log("a===b is true");
+	else console.log("a===b is false");
+
+	let num1 = 2;
+	let num2 = 4;
+
+	console.log(num1 & num2);
+	console.log(num1 | num2);
+
+	var ba = 5;
+
+	var getnewval = ba >= 6 ? "this is true" : "this is false";
+
+	console.log(getnewval);
+
+	//for
+	for (let i = 0; i < 5; i++) {
+		console.log(i);
+	}
+	//while
+
+	let y = 10;
+
+	while (y < 10) {
+		console.log(y);
+		y = y + 3;
+	}
+
+	//dowhile
+	do {
+		y = y + 3;
+		console.log(y);
+	} while (y < 10);
+
+	//foreach
+	const fruits = ["apple", "orange", "cherry"];
+
+	fruits.forEach(myFunction);
+
+	function myFunction(value, index) {
+		console.log(value, index);
+		//console.log(arr)
+	}
+
+	fruits.forEach((value, index) => {
+		console.log(value, index);
+	});
+
+	//map
+	const new_arr = fruits.map((v, i, a) => {
+		return v + i;
+	});
+	console.log(new_arr);
+
+	const num_arr = [0, 1, 2, 3, 4, 5];
+	//console.log(num_arr[2] * num_arr[2]);
+
+	// const sq_arr = num_arr.map(v=>{
+	//     return v * v;
+	// });
+
+	// /const sq_arr = num_arr.map(v => v * v);
+
+	const cube_arr = [];
+
+	//throw 500;
+
+	const sq_arr = num_arr.map((v) => {
+		cube_arr.push(v * v * v);
+		return v * v;
+	});
+
+	try {
+		let a = "one";
+		a = "two";
+	} catch (error) {
+		console.log("caught in catch:");
+		console.log(error);
+	} finally {
+		console.log("in finally:");
+	}
+
+	console.log(sq_arr);
+	console.log(cube_arr);
+
+	//built in functions
+
+	const d = new Date();
+	console.log(d);
+
+	var dt_str = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+
+	var time_str = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+
+	console.log(dt_str);
+	console.log(time_str);
+
+	const date_time_now = dt_str + " " + time_str;
+	console.log(date_time_now);
+
+	//alert('hello this is alert');
+
+	// var r = confirm("Are you sure you want to send a payment?");
+
+	// if (r == true) {
+	// 	x = "Payment sent!";
+	// } else {
+	// 	x = "Payment cancelled!";
+	// }
+
+	// alert(x);
+
+    var p = prompt('ENter your name');
+
+    console.log(`value entered as name is: ${p}`);
+</script>
+
+<h1>hello world</h1>
+
+<script>
+	document.write(5 + 6);
+	document.write("<br>");
+	document.write("5" + "6");
+</script>
+
+<p>this is new para</p>

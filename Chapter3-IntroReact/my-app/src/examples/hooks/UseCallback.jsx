@@ -14,13 +14,13 @@ const UseCB = () => {
         setCount((c) => c + 1);
     };
     
-    // const addTodo = useCallback(() => {
-    //     setTodos((t) => [...t, "New Todo in CB"]);
-    // }, [todos]);
+    const addTodo = useCallback(() => {
+        setTodos((t) => [...t, "New Todo in CB"]);
+    }, [todos]);
     
-    const addTodo = () => {
-        setTodos((t) => [...t, "New Todo"]);
-    }
+    // const addTodo = () => {
+    //     setTodos((t) => [...t, "New Todo"]);
+    // }
 
     return (
         <>

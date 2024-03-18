@@ -7,6 +7,6 @@ export default configureStore({
 	reducer: {
         profile: profileReducer,
         products: productReducer,
-        cart: cartReducer,
+        // cart: cartReducer,
     },
 });

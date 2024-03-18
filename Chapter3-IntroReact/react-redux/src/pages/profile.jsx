@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
+
 import { updateName } from "../store/reducers/profile.reducer";
 
 export default function Profile() {
@@ -15,7 +16,7 @@ export default function Profile() {
     return (
         <>
             <h1>Profile</h1>
-            <h3>Name: {profile.name}</h3>
+            <h3>Name: {profile.name} | {profile.email}</h3>
             <h3>Name:
                 {
                     !showeditName ?
@@ -27,7 +28,12 @@ export default function Profile() {
                         <>
                             <input type="text" onChange={(event) => setUname(event.target.value)} value={uname} />
                             {/* <button onClick={(event) => handleClick(event, 'name', uname)}>Save</button> */}
-                            <button onClick={(event) => {dispatch(updateName(uname));setShoweditName(!showeditName)} }>Save</button>
+                            <button onClick={
+                                (event) => {
+                                    dispatch(updateName(uname));
+                                    setShoweditName(!showeditName)} 
+                                }>
+                                    Save</button>
                         </>
 
                 }

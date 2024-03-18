@@ -1,8 +1,9 @@
 import { useState } from "react"
 
-export default function Profile({ appst, username, changeEmail }) {
+export default function Profile({ appst, username, changeMainSate }) {
     const [email, setEmail] = useState(appst.profile.email);
     const [showeditemail, setShoweditemail] = useState(false);
+
     const [phone, setPhone] = useState(appst.profile.phone);
     const [showeditphone, setShoweditphone] = useState(false);
 
@@ -14,8 +15,9 @@ export default function Profile({ appst, username, changeEmail }) {
             setShoweditphone(!showeditphone);
         else
             setShowEditname(!showeditName);
-            
-        changeEmail(changekey, changevalue);
+
+
+        changeMainSate(changekey, changevalue);
     }
 
 
@@ -31,7 +33,10 @@ export default function Profile({ appst, username, changeEmail }) {
                         </>
                         :
                         <>
-                            <input type="text" onChange={(event) => setUname(event.target.value)} value={uname} />
+                            <input type="text" 
+                                onChange={(event) => setUname(event.target.value)} 
+                                value={uname} />
+
                             <button onClick={(event) => handleClick(event, 'name', uname)}>Save</button>
                         </>
                     
@@ -48,7 +53,7 @@ export default function Profile({ appst, username, changeEmail }) {
                         :
                         <>
                             <input type="text" name="email_txt" onChange={(event) => setEmail(event.target.value)} value={email} />
-                            <button onClick={(event) => { setShoweditemail(!showeditemail); changeEmail('email', email) }}>Save</button>
+                            <button onClick={(event) => { setShoweditemail(!showeditemail); changeMainSate('email', email) }}>Save</button>
                         </>
                 }
             </h3>
